@@ -1,0 +1,38 @@
+---
+// Many visitors searching "tbill" are looking for U.S. Treasury Bills.
+// This bar points them to the official site.
+export const TREASURY_URL = 'https://www.treasurydirect.gov/';
+---
+
+<aside class="tbill-notice" aria-label="Looking for Treasury Bills?">
+  <p>
+    Looking for U.S. Treasury Bills (T-Bills)?
+    <a href={TREASURY_URL} rel="noopener">Go to TreasuryDirect.gov&nbsp;&rarr;</a>
+    <span class="disclaimer">This personal site is not affiliated with the U.S. Treasury.</span>
+  </p>
+</aside>
+
+<style>
+  .tbill-notice {
+    background: var(--notice-bg);
+    color: var(--notice-text);
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  p {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.6rem;
+    align-items: baseline;
+  }
+  a {
+    font-weight: 600;
+  }
+  .disclaimer {
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+</style>
