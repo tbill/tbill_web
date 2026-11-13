@@ -1,0 +1,36 @@
+---
+// A tiny page that sends the visitor straight on to another site.
+// GitHub Pages can't do server-side redirects, so this uses an
+// HTML meta refresh plus a visible link as a fallback.
+interface Props {
+  to: string;
+  label: string;
+}
+
+const { to, label } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content={`0; url=${to}`} />
+    <link rel="canonical" href={to} />
+    <title>Redirecting to {label}</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 40rem;
+        margin: 4rem auto;
+        padding: 0 1rem;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Redirecting you to <a href={to}>{label}</a>&hellip;</p>
+    <p>This personal site is not affiliated with the U.S. Treasury.</p>
+  </body>
+</html>

@@ -7,6 +7,7 @@ Source for **https://www.tbill.us**, built with [Astro](https://astro.build) and
 - Pages live in `src/pages/`: each `.astro` file becomes a page (`about.astro` → `/about/`).
 - The shared look (header, footer, styles) lives in `src/layouts/`, `src/components/` and `src/styles/`.
 - Files in `public/` are copied as-is. `public/CNAME` tells GitHub Pages the custom domain.
+- A notice bar on every page (`src/components/TbillNotice.astro`) points people looking for U.S. Treasury Bills to TreasuryDirect.gov, and `/tbills/`, `/t-bills/` and `/treasury/` redirect there.
 - Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes it.
 
 ## Working on it locally

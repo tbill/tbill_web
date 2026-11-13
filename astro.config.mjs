@@ -6,5 +6,10 @@ import sitemap from '@astrojs/sitemap';
 // so no `base` path is needed.
 export default defineConfig({
   site: 'https://www.tbill.us',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Redirect pages shouldn't be listed for search engines.
+      filter: (page) => !/\/(tbills|t-bills|treasury)\/$/.test(page),
+    }),
+  ],
 });

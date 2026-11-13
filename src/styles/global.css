@@ -5,6 +5,8 @@
   --accent: #1f4e79;
   --border: #e3e7ed;
   --max: 46rem;
+  --notice-bg: #fff7e0;
+  --notice-text: #3d3420;
   color-scheme: light dark;
 }
 
@@ -15,6 +17,8 @@
     --muted: #9aa5b4;
     --accent: #7fb3e6;
     --border: #2a313b;
+    --notice-bg: #2a2516;
+    --notice-text: #efe3c2;
   }
 }
 
